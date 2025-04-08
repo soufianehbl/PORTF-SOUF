@@ -309,6 +309,30 @@ footer .communication{
     }
     
 }
+/* Dark/Light Mode */
+body {
+  background-color: #fff;
+  color: #000;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+#themeToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
 #backToTop {
   position: fixed;
   bottom: 30px;
