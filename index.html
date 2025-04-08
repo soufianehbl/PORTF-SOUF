@@ -15,6 +15,7 @@
     <section class="home" id="home">
         <nav>
            <div class="logo"><h2> Code for <span> Beginners</span></h2></div> 
+            <button id="themeToggle" title="Changer le thème">🌓</button>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#About">About Me</a></li>
@@ -155,6 +156,32 @@
       window.onload = type;
 </script>
 <button id="backToTop" title="Retour en haut">↑</button>
+<script>
+  // Dark / Light Mode
+  const toggleThemeBtn = document.getElementById("themeToggle");
+  toggleThemeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+
+  // Back to Top
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
 
 </body>
 </html>
