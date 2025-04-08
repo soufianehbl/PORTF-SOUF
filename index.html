@@ -28,7 +28,7 @@
             <div class="container-textes">
                 <h4><div class="hello">Hello , my name is</div> </h4>
                 <h1>Soufiane <span>Habiballah</span></h1>
-                <h3>I'm a <span>Front-end</span> developer</h3>
+                <h3 id="typewriter"></h3>
                 <a download="CV" href="SOUFIANECV.pdf" class="btn"  >Downlaod Cv</a> 
                 
                 <div class="social">
@@ -139,6 +139,20 @@
             </p>
         </div>
     </footer>
-    
+  <script>
+      const text = "I'm a Front-end developer";
+      const element = document.getElementById("typewriter");
+      let i = 0;
+
+      function type() {
+        if (i < text.length) {
+          element.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, 100);
+        }
+      }
+
+      window.onload = type;
+</script>  
 </body>
 </html>
