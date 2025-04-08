@@ -27,7 +27,7 @@ html{
     display: flex;
     flex-direction: column;
 }
-#typewriter span {
+#typewriter {
   color: #00ffcc;
   font-weight: bold;
 }
