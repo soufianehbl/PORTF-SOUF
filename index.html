@@ -181,6 +181,17 @@
     });
   });
 </script>
+html {
+  scroll-behavior: smooth;
+}
+<script>
+  const toggleThemeBtn = document.getElementById("themeToggle");
+
+  toggleThemeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+  });
+</script>
+
 
 
 </body>
