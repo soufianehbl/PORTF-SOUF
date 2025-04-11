@@ -79,8 +79,7 @@ nav{
     background-color:rgba(2, 11, 20, 0.432);
     border-radius: 24px;
     margin-bottom: 1rem;
-    color: inherit; /* hérite la couleur du parent (body/nav) */
-    font-weight: bold;
+    
 }
 
 
@@ -264,6 +263,10 @@ footer{
     padding: 20px;
     text-align: center;
 }
+body.light-mode footer {
+  background-color: #f2f2f2;
+  color: black;
+}
 footer .content-footer {
     display: flex;
     flex-direction: column;
@@ -284,10 +287,7 @@ footer .communication{
     padding: 1px ;
     background-color: #0f0c29;   
 }
-body.light-mode footer {
-  background-color: #f2f2f2;
-  color: black;
-}
+
 
 
 /*   media queries */
@@ -362,5 +362,34 @@ body.dark-mode {
 #backToTop:hover {
   background-color: #00cccc;
 }
+/* Mode sombre par défaut */
+nav {
+  background-color: #1a1a1a;
+  color: white;
+}
+nav a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Mode clair */
+body.light-mode nav {
+  background-color: #ffffff;
+  color: black;
+}
+body.light-mode nav a {
+  color: inherit;
+}
+body {
+  background-color: #121212;
+  color: white;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
 
 
