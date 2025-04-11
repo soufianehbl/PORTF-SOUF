@@ -353,4 +353,16 @@ body.dark-mode {
 #backToTop:hover {
   background-color: #00cccc;
 }
+/* Mode sombre par défaut */
+body {
+  background-color: #121212;
+  color: white;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Light Mode */
+body.light-mode {
+  background-color: white;
+  color: black;
+}
 
