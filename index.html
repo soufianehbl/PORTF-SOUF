@@ -157,12 +157,6 @@
 </script>
 <button id="backToTop" title="Retour en haut">↑</button>
 <script>
-  // Dark / Light Mode
-  const toggleThemeBtn = document.getElementById("themeToggle");
-  toggleThemeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-  });
-
   // Back to Top
   const backToTopBtn = document.getElementById("backToTop");
 
@@ -181,8 +175,29 @@
     });
   });
 </script>
+<script>
+  const toggleThemeBtn = document.getElementById("themeToggle");
 
+  toggleThemeBtn.addEventListener("click", () => {
+    // Basculer la classe light-mode
+    document.body.classList.toggle("light-mode");
 
+    // Sauvegarder le choix dans le navigateur
+    if (document.body.classList.contains("light-mode")) {
+      localStorage.setItem("theme", "light");
+    } else {
+      localStorage.setItem("theme", "dark");
+    }
+  });
+
+  // Au chargement de la page : charger le thème depuis le stockage
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+      document.body.classList.add("light-mode");
+    }
+  });
+</script>
 
 
 </body>
