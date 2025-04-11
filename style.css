@@ -19,7 +19,6 @@ html{
     font-family: "New Amsterdam", sans-serif;
     color:var(--lightColor) ;
     font-size: 16px;
-    scroll-behavior: smooth;
 }
 .home{
     width: 100% ;
@@ -362,16 +361,6 @@ body.dark-mode {
 
 #backToTop:hover {
   background-color: #00cccc;
-}
-.section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 
