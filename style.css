@@ -466,7 +466,95 @@ nav {
     display: none; /* facultatif */
   }
 }
+/* ===== ABOUT SECTION RESPONSIVE ===== */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 50px 10%;
+  flex-wrap: wrap;
+}
 
+.container-images,
+.container-textes {
+  flex: 1 1 45%;
+}
 
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 5%;
+  }
 
+  .container-images,
+  .container-textes {
+    width: 100%;
+  }
 
+  .container-images svg {
+    width: 100%;
+    height: auto;
+  }
+}
+/* ===== SERVICES SECTION RESPONSIVE ===== */
+.Services {
+  padding: 50px 10%;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 30%;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .box {
+    flex-direction: column;
+  }
+}
+/* ===== SKILLS SECTION RESPONSIVE ===== */
+.skills {
+  padding: 50px 10%;
+}
+
+.container-skills {
+  text-align: center;
+}
+
+.content-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill img {
+  width: 60px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .skill img {
+    width: 45px;
+  }
+
+  .container-images svg {
+    width: 100%;
+    height: auto;
+  }
+}
