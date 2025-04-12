@@ -558,3 +558,49 @@ nav {
     height: auto;
   }
 }
+/* Footer responsive */
+footer {
+  background: var(--background-color);
+  color: var(--text-color);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.content-footer h2 {
+  font-size: 24px;
+}
+
+.content-footer p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .content-footer {
+    padding: 20px;
+  }
+
+  .content-footer h2 {
+    font-size: 20px;
+  }
+
+  .content-footer p {
+    font-size: 14px;
+  }
+
+  .communication {
+    display: block;
+    margin-top: 8px;
+  }
+}
+/*animation fluide entre les sections au scroll*/
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
